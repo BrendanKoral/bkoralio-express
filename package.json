@@ -1,0 +1,22 @@
+{
+  "name": "bkoralio-express",
+  "version": "1.0.0",
+  "description": "The Express server I'm running for my personal site",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrendanKoral/bkoralio-express.git"
+  },
+  "author": "Brendan Koral",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrendanKoral/bkoralio-express/issues"
+  },
+  "homepage": "https://github.com/BrendanKoral/bkoralio-express#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
