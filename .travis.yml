@@ -3,4 +3,9 @@ node_js: "8"
 before_install:
 - openssl aes-256-cbc -K $encrypted_6a0cd62280ec_key -iv $encrypted_6a0cd62280ec_iv
   -in .travis/id_rsa.enc -out .travis/id_rsa -d
+
+before_script:
+  - echo -e "Host heroku.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+
 after_success: bash .travis/deploy.sh
