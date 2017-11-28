@@ -8,6 +8,6 @@ before_script:
   - echo -e "35.184.248.205 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBACfi2+rcjt1a0PnZaXUgKJdI5rv327Ju6BH8BPGKokZAU3uffeKQWxiH//QFc9Yscm8H0fdrrhWCpagTBY8I18=" >> ~/.ssh/config
 
 addons:
-  ssh_known_hosts: git.bkoral.io
+  ssh_known_hosts: 35.184.248.205
 
 after_success: bash .travis/deploy.sh
