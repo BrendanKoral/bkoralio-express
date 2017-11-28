@@ -4,9 +4,6 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_6a0cd62280ec_key -iv $encrypted_6a0cd62280ec_iv
   -in .travis/id_rsa.enc -out .travis/id_rsa -d
 
-before_script:
-  - echo -e "35.184.248.205 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBACfi2+rcjt1a0PnZaXUgKJdI5rv327Ju6BH8BPGKokZAU3uffeKQWxiH//QFc9Yscm8H0fdrrhWCpagTBY8I18=" >> ~/.ssh/config
-
 addons:
   ssh_known_hosts: 35.184.248.205
 
