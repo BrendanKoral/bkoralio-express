@@ -12,10 +12,10 @@ ssh-add .travis/deploy_key # Add the private key to SSH
 ssh -o StrictHostKeyChecking=no koralbuild@$IP -p $PORT <<EOF
   cd $DEPLOY_DIR
   
-  if [ ! -d "bkoralio-express" ]; then
+  if [ ! -d $DEPLOY_DIR ]; then
     # clone the repo on to the server
     echo "Cloning repo from github"
-    git clone $REPO
+    git clone $REPO $DEPLOY_DIR
     cd $LIVE_DIR
   else
     # pull changes
