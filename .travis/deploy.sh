@@ -3,8 +3,8 @@
 echo "Running deploy"
 
 eval "$(ssh-agent -s)" # Start ssh-agent cache
-chmod 600 .travis/deploy-key # Allow read access to the private key
-ssh-add .travis/deploy-key # Add the private key to SSH
+chmod 600 .travis/deploy_key # Allow read access to the private key
+ssh-add .travis/deploy_key # Add the private key to SSH
 
 git config --global push.default matching
 git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR
