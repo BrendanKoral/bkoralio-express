@@ -30,9 +30,6 @@ ssh -o StrictHostKeyChecking=no koralbuild@$IP -p $PORT <<EOF
   echo "UPDATING PACKAGES JUST TO BE SURE"
   npm update
 
-  pm2 describe bkoralio-server > /dev/null
-  RUNNING=$?
-
   echo "RESTARTING BKORAL.IO SERVER"
   pm2 restart bkoralio-server.js
 EOF
