@@ -33,12 +33,6 @@ ssh -o StrictHostKeyChecking=no koralbuild@$IP -p $PORT <<EOF
   pm2 describe bkoralio-server > /dev/null
   RUNNING=$?
 
-  if [ "${RUNNING}" -ne 0 ]; then
-    pm2 start /var/www/bkoralio/bkoralio-express/bkoralio-server.js
-  else
-    pm2 restart bkoralio-server
-  fi;
-
   echo "RESTARTING BKORAL.IO SERVER"
   pm2 restart bkoralio-server.js
 EOF
