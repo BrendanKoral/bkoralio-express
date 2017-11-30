@@ -25,5 +25,5 @@ ssh -o StrictHostKeyChecking=no koralbuild@$IP -p $PORT <<EOF
   fi
   
   npm install && npm update
-  pm2 start bkoralio-server.js
+  pm2 restart bkoralio-server.js
 EOF
