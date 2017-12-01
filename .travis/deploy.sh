@@ -37,5 +37,7 @@ ssh -o StrictHostKeyChecking=no koralbuild@$IP -p $PORT <<EOF
   echo -e "${CYAN}RESTARTING BKORAL.IO SERVER ${NC} \n"
   pm2 restart bkoralio-server.js
 
+  echo -e "\n"
+
   echo -e "${GREEN}Bkoral.io server has been rebuilt and restarted.${NC}"
 EOF
