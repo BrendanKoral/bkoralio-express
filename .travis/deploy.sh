@@ -4,7 +4,7 @@ CYAN='\033[0;36m'
 GREEN='\033[1;32m'
 NC='\033[0m'
 
-echo -e "${CYAN}Running deploy ${NC} \n"
+echo "${CYAN}Running deploy ${NC} \n"
 
 eval "$(ssh-agent -s)" # Start ssh-agent cache
 chmod 600 .travis/deploy_key # Allow read access to the private key
