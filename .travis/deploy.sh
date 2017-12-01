@@ -27,9 +27,13 @@ ssh -o StrictHostKeyChecking=no koralbuild@$IP -p $PORT <<EOF
     cd $LIVE_DIR
     git pull
   fi
+
+  echo -e "\n"
   
   echo -e "${CYAN}INSTALLING NODE PACKAGES ${NC}\n"
   npm install
+
+  echo -e "\n"
 
   echo -e "${CYAN}UPDATING PACKAGES JUST TO BE SURE ${NC}\n"
   npm update
